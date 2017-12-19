@@ -1,0 +1,8 @@
+DynamicProxy动态代理类典型应用就是SpringAOP
+java动态代理实现相关类位于java.lang,reflect包，主要涉及两个类：
+（1）InvocationHandler接口。代理实例的调用处理程序实现的接口，该接口中定义如下方法：
+public Object invoke(Object proxy,Method method,Object[] args)throw Throwable;
+第一个参数表示代理类，二代理的方法，三 代理方法的参数数组
+（2）Proxy类，该类是动态代理类
+public static Object newProxyInstance(ClassLodaer.Class<?>[] interfaces,InvocationHandler h)
+用于根据传入的接口类型interfaces返回一个动态创建的代理类实例 1 类加载器  2代理类实现的接口列表（与真实主题类的接口列表一致）3 参数h 调用处理程序类
